@@ -1,23 +1,22 @@
-/* styles.css */
+/* styles.module.css */
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #282c33, #171b1f);
-    color: #fff;
+    background: #f9f9f9; /* Light gray background */
+    color: #333;
 }
 
 .header {
-    background: #0d1117;
-    color: #61dafb;
+    background: #2e2e2e; /* Dark gray header background */
+    color: #fff;
     padding: 2em 1em;
     text-align: center;
-    border-bottom: 2px solid #61dafb;
 }
 
 nav {
-    background: #0d1117;
+    background: #404040; /* Slightly darker gray navigation background */
     padding: 1em;
 }
 
@@ -37,9 +36,9 @@ nav li {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #0d1117;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: #fff; /* White section background */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -51,7 +50,7 @@ nav li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #0d1117, #161b22);
+    background: linear-gradient(to right, #2e2e2e, #007acc); /* Gradient from dark gray to a subdued blue */
     z-index: -1;
     animation: gradientAnimation 5s linear infinite;
 }
@@ -66,7 +65,7 @@ nav li {
 }
 
 h1, h2, h3 {
-    color: #61dafb;
+    color: #2e2e2e; /* Dark gray text color */
 }
 
 ul {
@@ -79,7 +78,7 @@ li {
 }
 
 a {
-    color: #34d399;
+    color: #007acc; /* Subdued blue link color */
     text-decoration: none;
 }
 
@@ -88,47 +87,16 @@ a:hover {
 }
 
 .footer {
-    background: #0d1117;
-    color: #61dafb;
+    background: #2e2e2e; /* Dark gray footer background */
+    color: #fff;
     text-align: center;
     padding: 1em;
     position: fixed;
     bottom: 0;
     width: 100%;
-    border-top: 2px solid #61dafb;
-}
-
-.menu-toggle span {
-    background: #61dafb;
-}
-
-.menu {
-    background: #0d1117;
-}
-
-.menu li {
-    text-align: center;
-    padding: 15px;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 1000;
-    }
-
-    .desktop-menu {
-        display: none;
-    }
-
     .section {
         padding: 15px;
     }
