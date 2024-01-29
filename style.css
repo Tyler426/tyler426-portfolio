@@ -96,6 +96,45 @@ a:hover {
     width: 100%;
 }
 
+/* Add dark mode styles */
+.dark-mode body {
+    background: #1a1a1a; /* Dark background color for dark mode */
+    color: #fff; /* White text color for dark mode */
+}
+
+.dark-mode .header {
+    background: #333; /* Darker header background for dark mode */
+}
+
+.dark-mode nav {
+    background: #2a2a2a; /* Darker navigation background for dark mode */
+}
+
+.dark-mode .section {
+    background: #333; /* Darker section background for dark mode */
+    color: #fff; /* White text color for dark mode */
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: #fff; /* White text color for dark mode */
+}
+
+.dark-mode ul, .dark-mode li {
+    color: #fff; /* White text color for dark mode */
+}
+
+.dark-mode a {
+    color: #9cc9ff; /* Lighter blue link color for dark mode */
+}
+
+.dark-mode a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode .footer {
+    background: #333; /* Darker footer background for dark mode */
+}
+
 @media (max-width: 768px) {
     .section {
         padding: 15px;
