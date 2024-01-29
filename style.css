@@ -1,22 +1,23 @@
-/* styles.module.css */
+/* styles.css */
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    background: linear-gradient(to right, #282c33, #171b1f);
+    color: #fff;
 }
 
 .header {
-    background: #2a2a2a;
-    color: #fff;
+    background: #0d1117;
+    color: #61dafb;
     padding: 2em 1em;
     text-align: center;
+    border-bottom: 2px solid #61dafb;
 }
 
 nav {
-    background: #333;
+    background: #0d1117;
     padding: 1em;
 }
 
@@ -36,9 +37,9 @@ nav li {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #0d1117;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
 }
@@ -50,7 +51,7 @@ nav li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #2a2a2a, #007bff);
+    background: linear-gradient(to right, #0d1117, #161b22);
     z-index: -1;
     animation: gradientAnimation 5s linear infinite;
 }
@@ -65,7 +66,7 @@ nav li {
 }
 
 h1, h2, h3 {
-    color: #2a2a2a;
+    color: #61dafb;
 }
 
 ul {
@@ -78,7 +79,7 @@ li {
 }
 
 a {
-    color: #007bff;
+    color: #34d399;
     text-decoration: none;
 }
 
@@ -87,16 +88,47 @@ a:hover {
 }
 
 .footer {
-    background: #2a2a2a;
-    color: #fff;
+    background: #0d1117;
+    color: #61dafb;
     text-align: center;
     padding: 1em;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 2px solid #61dafb;
+}
+
+.menu-toggle span {
+    background: #61dafb;
+}
+
+.menu {
+    background: #0d1117;
+}
+
+.menu li {
+    text-align: center;
+    padding: 15px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
     .section {
         padding: 15px;
     }
