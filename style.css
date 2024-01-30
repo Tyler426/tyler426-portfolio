@@ -47,11 +47,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 @media screen and (max-width: 600px) {
     .menu-items {
         display: none;
@@ -74,5 +69,14 @@ nav a:hover {
     
     .menu-items a {
         padding: 14px 16px;
+        text-align: center;
+    }
+
+    .menu-items a::after {
+        width: 0; /* remove underline on small screens */
+    }
+
+    .menu-items a:hover::after {
+        width: 100%;
     }
 }
