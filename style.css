@@ -29,6 +29,7 @@ nav a {
     padding: 14px 16px;
     text-align: center;
     position: relative;
+    transition: color 0.3s ease; /* Added transition for color change */
 }
 
 nav a::after {
@@ -40,11 +41,36 @@ nav a::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease;
+    transition: width 0.5s ease; /* Slowed down the underline animation */
 }
 
 nav a:hover::after {
     width: 100%;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Added the outline effect */
+nav a:before,
+nav a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px; /* Adjust the width of the outline */
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity of the outline */
+}
+
+nav a:before {
+    left: -4px; /* Position on the left side */
+}
+
+nav a:after {
+    right: -4px; /* Position on the right side */
 }
 
 @media screen and (max-width: 600px) {
@@ -63,7 +89,7 @@ nav a:hover::after {
     }
 
     .menu-icon:hover + .menu-items,
-    .menu-items.active {
+    .menu-items:hover {
         display: flex;
     }
     
@@ -73,7 +99,7 @@ nav a:hover::after {
     }
 
     .menu-items a::after {
-        width: 0; /* remove underline on small screens */
+        width: 0;
     }
 
     .menu-items a:hover::after {
