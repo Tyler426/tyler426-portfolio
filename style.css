@@ -29,7 +29,6 @@ nav a {
     padding: 14px 16px;
     text-align: center;
     position: relative;
-    transition: color 0.3s ease;
 }
 
 nav a::before,
@@ -70,11 +69,6 @@ nav a:hover::after {
 
     .menu-icon {
         display: block;
-    }
-
-    .menu-icon:hover + .menu-items,
-    .menu-items.active {
-        display: flex;
     }
 
     .menu-items a {
