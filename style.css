@@ -1,189 +1,56 @@
-/* Reset some default styles for consistency */
-body, h1, h2, h3, p, ul, li, form {
-    margin: 0;
-    padding: 0;
-}
-
-/* Default Light Mode */
 body {
-    font-family: 'Caveat', cursive; /* Change to a creative font, e.g., 'Caveat' */
-    background-color: #f6f9fc;
-    color: #333;
-    position: relative; /* Make the body relative for the fixed footer */
-    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #fff;
-}
-
-header, nav, section, footer {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header h1, nav a, section h2, section p, .project h3, .project p, form label, form input, footer p {
-    color: #333;
-}
-
-/* Dark Mode text color */
-body.dark-mode header h1, body.dark-mode nav a, body.dark-mode section h2, body.dark-mode section p,
-body.dark-mode .project h3, body.dark-mode .project p, body.dark-mode form label, body.dark-mode form input,
-body.dark-mode footer p {
-    color: #fff;
-}
-
-nav ul {
-    list-style: none;
+nav {
+    background-color: #333;
+    overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.menu-items {
+    display: flex;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 14px 16px;
+    text-align: center;
 }
 
 nav a:hover {
-    color: #2980b9;
+    background-color: #ddd;
+    color: black;
 }
 
-/* Dark Mode link color */
-body.dark-mode nav a {
-    color: #bb86fc;
-}
+@media screen and (max-width: 600px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
 
-body.dark-mode nav a:hover {
-    color: #03dac5;
-}
+    .menu-icon {
+        display: block;
+    }
 
-.section {
-    margin-top: 20px;
-}
-
-.project {
-    margin-bottom: 20px;
-    background-color: #ecf0f1;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.project h3 {
-    margin-top: 10px;
-    color: #333;
-}
-
-/* Dark Mode project title color */
-body.dark-mode .project h3 {
-    color: #fff;
-}
-
-.project p {
-    color: #555;
-}
-
-/* Dark Mode project description color */
-body.dark-mode .project p {
-    color: #ccc;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.project a:hover {
-    background-color: #2980b9;
-}
-
-/* Dark Mode button background color */
-body.dark-mode .project a {
-    background-color: #bb86fc;
-}
-
-body.dark-mode .project a:hover {
-    background-color: #03dac5;
-}
-
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-/* Dark Mode form label color */
-body.dark-mode label {
-    color: #fff;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #333;
-}
-
-input[type="submit"] {
-    background-color: #3498db;
-    color: #fff;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #2980b9;
-}
-
-/* Dark Mode form input color */
-body.dark-mode input {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #555;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed; /* Make the footer fixed at the bottom */
-    bottom: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure the footer is on top of other elements */
-}
-
-/* Dark Mode footer background color */
-body.dark-mode footer {
-    background-color: #1a1a1a;
-}
-
-/* Dark Mode footer text color */
-body.dark-mode footer p {
-    color: #fff;
+    .menu-icon:hover + .menu-items {
+        display: flex;
+    }
 }
