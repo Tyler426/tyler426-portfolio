@@ -175,6 +175,7 @@ footer {
     position: fixed; /* Make the footer fixed at the bottom */
     bottom: 0;
     width: 100%;
+    z-index: 1000; /* Ensure the footer is on top of other elements */
 }
 
 /* Dark Mode footer background color */
