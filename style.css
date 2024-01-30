@@ -63,7 +63,7 @@ nav a:hover::after {
     }
 
     .menu-icon:hover + .menu-items,
-    .menu-items:hover {
+    .menu-items.active {
         display: flex;
     }
     
