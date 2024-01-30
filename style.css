@@ -6,9 +6,11 @@ body, h1, h2, h3, p, ul, li, form {
 
 /* Default Light Mode */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Caveat', cursive; /* Change to a creative font, e.g., 'Caveat' */
     background-color: #f6f9fc;
     color: #333;
+    position: relative; /* Make the body relative for the fixed footer */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
 }
 
 /* Dark Mode */
@@ -170,7 +172,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: fixed; /* Make the footer fixed at the bottom */
     bottom: 0;
     width: 100%;
 }
