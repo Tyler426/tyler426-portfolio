@@ -71,4 +71,8 @@ nav a:hover {
     .menu-items:hover {
         display: flex;
     }
+    
+    .menu-items a {
+        padding: 14px 16px;
+    }
 }
