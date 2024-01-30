@@ -32,36 +32,17 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.5s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 nav a::before,
 nav a::after {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%;
     width: 2px; /* Adjust the width of the outline */
+    height: 50%; /* Adjust the height of the outline */
     background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity of the outline */
+    transform: translateY(-50%);
+    transition: height 0.3s ease;
 }
 
 nav a::before {
@@ -70,6 +51,11 @@ nav a::before {
 
 nav a::after {
     right: -2px; /* Position on the right side */
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -91,22 +77,21 @@ nav a::after {
     .menu-items:hover {
         display: flex;
     }
-    
+
     .menu-items a {
         padding: 14px 16px;
         text-align: center;
-    }
-
-    .menu-items a::after {
-        width: 0;
-    }
-
-    .menu-items a:hover::after {
-        width: 100%;
+        position: relative;
     }
 
     .menu-items a::before,
     .menu-items a::after {
         width: 2px;
+        height: 50%;
+    }
+
+    .menu-items a:hover::before,
+    .menu-items a:hover::after {
+        height: 100%;
     }
 }
