@@ -37,23 +37,23 @@ nav a::after {
     display: block;
     position: absolute;
     top: 100%;
-    width: 2px; /* Adjust the width of the outline */
-    height: 0; /* Initial height set to 0 */
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity of the outline */
+    width: 2px;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.5);
     transition: height 0.3s ease;
 }
 
 nav a::before {
-    left: -2px; /* Position on the left side */
+    left: -2px;
 }
 
 nav a::after {
-    right: -2px; /* Position on the right side */
+    right: -2px;
 }
 
 nav a:hover::before,
 nav a:hover::after {
-    height: 50%; /* Adjust the height of the underline effect */
+    height: 50%;
 }
 
 @media screen and (max-width: 600px) {
@@ -69,6 +69,11 @@ nav a:hover::after {
 
     .menu-icon {
         display: block;
+    }
+
+    .menu-icon:hover + .menu-items,
+    .menu-items:hover {
+        display: flex;
     }
 
     .menu-items a {
