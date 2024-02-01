@@ -3,10 +3,13 @@ body {
     color: white;
     font-size: 16px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
-    margin: 0;
+    margin: 20px 0;
     font-size: 20px;
 }
 
@@ -48,7 +51,7 @@ nav a:hover::after {
 .image-button {
     max-width: 300px;
     position: relative;
-    margin: 20px auto;
+    margin: auto; /* Center the image and button horizontally */
 }
 
 .image-button button,
@@ -77,6 +80,6 @@ nav a:hover::after {
 
 footer {
     text-align: center;
-    margin-top: 20px;
     padding: 10px;
+    margin-top: auto; /* Push the footer to the bottom */
 }
