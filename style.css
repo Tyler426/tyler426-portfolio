@@ -21,6 +21,7 @@ img {
     width: 200px;
     height: 200px;
     border: 2px solid white;
+    opacity: 0.8;
 }
 
 button {
@@ -30,6 +31,6 @@ button {
     color: white;
     font-size: 14px;
     font-style: bold;
-    background-color: black;
+    background-color: rgba(42, 38, 38, 0.891);
 
 }
