@@ -20,18 +20,13 @@ nav a {
 img {
     width: 200px;
     height: 200px;
-    border: 20px;
-    border-color: white;
-    opacity: 0.8;
+    border: 5px solid white;
 }
 
 button {
     width: 100px;
     height: 30px;
-    border: 20px;
-    border-color: white;
-    text-decoration: none;
-    color: white;
+    border: 5px solid white;
     font-size: 10px;
     font-style: bold;
     background-color: black;
