@@ -10,16 +10,34 @@ nav {
     font-size: 20px;
 }
 
+nav ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the spacing between navigation items */
+}
+
 nav a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
-    display: inline-block;
+    display: block;
 }
 
 .image-button {
     max-width: 300px;
     position: relative;
+    margin: 20px auto; /* Added margin for spacing */
+}
+
+.image-button button,
+.image-button img {
+    width: 100%;
+    border: 2px solid white;
 }
 
 .image-button button {
@@ -27,11 +45,9 @@ nav a {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
     height: 40px;
-    border: 2px solid white;
-    color: #ffffff;
     background-color: #222324;
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
 }
@@ -39,7 +55,10 @@ nav a {
 .image-button img {
     display: block;
     height: auto;
-    width: 100%;
-    opacity: 0.8;
-    border: 2px solid white;
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center; /* Center the text in the footer */
+    margin-top: 20px; /* Add space above the footer */
 }
