@@ -17,20 +17,29 @@ nav a {
     display: inline-block;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-    border: 2px solid white;
-    opacity: 0.8;
+.image-button {
+    max-width: 300px;
+    position: relative;
 }
 
-button {
+.image-button button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
-    height: 30px;
+    height: 40px;
     border: 2px solid white;
-    color: white;
-    font-size: 14px;
-    font-style: bold;
-    background-color: rgba(42, 38, 38, 0.891);
+    color: #ffffff;
+    background-color: #222324;
+    font-size: 16px;
+    cursor: pointer;
+}
 
+.image-button img {
+    display: block;
+    height: auto;
+    width: 100%;
+    opacity: 0.8;
+    border: 2px solid white;
 }
