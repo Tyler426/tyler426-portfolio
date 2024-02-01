@@ -11,6 +11,7 @@ body {
 nav {
     margin: 20px 0;
     font-size: 20px;
+    cursor: move;
 }
 
 nav ul {
@@ -40,7 +41,7 @@ nav a::after {
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: #3498db; /* Change the color as needed */
+    background-color: #3498db;
     transition: width 0.3s ease;
 }
 
@@ -49,9 +50,10 @@ nav a:hover::after {
 }
 
 .image-button {
-    max-width: 300px;
+    max-width: 100%;
     position: relative;
-    margin: auto; /* Center the image and button horizontally */
+    margin: auto;
+    cursor: move;
 }
 
 .image-button button,
@@ -69,7 +71,7 @@ nav a:hover::after {
     background-color: #222324;
     color: #ffffff;
     font-size: 16px;
-    cursor: pointer;
+    cursor: move;
 }
 
 .image-button img {
@@ -81,5 +83,20 @@ nav a:hover::after {
 footer {
     text-align: center;
     padding: 10px;
-    margin-top: auto; /* Push the footer to the bottom */
+    margin-top: auto;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    nav {
+        font-size: 16px;
+    }
+
+    .image-button button {
+        height: 30px;
+    }
+
+    footer {
+        padding: 5px;
+    }
 }
